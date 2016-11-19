@@ -11,8 +11,8 @@ import org.jire.arrowhead.processByName
 val csgo by lazy(LazyThreadSafetyMode.NONE) { processByName("csgo.exe")!! }
 val csgoModule by lazy(LazyThreadSafetyMode.NONE) { csgo.modules["csgo.exe"]!! }
 
-const val ENTITY_SIZE = 16
-const val GLOW_OBJECT_SIZE = 56
+const val ENTITY_SIZE = 0
+const val GLOW_OBJECT_SIZE = 0
 
 inline fun <reified T : Any> cached(address: Int, offset: Int = 0)
 		= Cached<T>({ csgo[address + offset] })
